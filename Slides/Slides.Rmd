@@ -1,6 +1,6 @@
 ---
 title: "Excuse me, do you have a moment to talk about GitHub?"
-subtitle: "Benefits and barriers to use of git and GitHub for not quite software projects"  
+subtitle: "Using git and GitHub in Ecology"  
 author: 
   - "Eric R. Scott"
 date: '`r Sys.Date()`'
@@ -12,7 +12,8 @@ output:
       highlightStyle: github
       highlightLines: true
       ratio: 16:9
-      countIncrementalSlides: true
+      countIncrementalSlides: false
+      titleSlideClass: ["inverse", "title-slide",  "center", "middle"]
 ---
 
 ```{r setup, include=FALSE}
@@ -30,11 +31,7 @@ knitr::opts_chunk$set(
 
 ```{r xaringan-themer, include=FALSE, warning=FALSE}
 library(xaringanthemer)
-style_duo_accent(
-  primary_color = "#1381B0",
-  secondary_color = "#FF961C",
-  inverse_header_color = "#FFFFFF"
-)
+style_mono_accent(base_color = "#23395b")
 ```
 ---
 ## Outline 
@@ -103,7 +100,9 @@ So instead of this:
 
 You have this:
 
+.center[
 ![image of git commit history with commits "initial commit", "add summary table", "move fig1 code to report", "add linear model", "change to log-normal GLM"](/images/ex_hist.png)
+]
 
 ---
 ## GitHub
@@ -113,6 +112,8 @@ You have this:
 - Web interface for git
 
 - Repositories can be public or private
+
+--
 
 ### Typical git/GitHub workflow:
 1. Make changes to  code, text, etc. and save changes
@@ -144,20 +145,31 @@ class: inverse center middle
 
 2017 — First ever commit.  Added function to query chemical IDs for flavors and aromas to the [`webchem` package](https://github.com/ropensci/webchem).   
 
+--
+
 2018 — Started using GitHub as a way to backup all my analyses
+
+--
 
 2019 — First time really using GitHub collaboratively. `webchem` maintainers invited me to apply for [R Consortium grant](https://www.r-consortium.org/projects/awarded-projects/2019-group-2#webchem:+accessing+chemical+information+from+the+web) with them.
 
+--
+
 2020 — Started collaboration on manuscripts via GitHub: [`webchem` manuscript](https://github.com/EDiLD/webchem_paper) and [first postdoc paper](https://github.com/BrunaLab/HeliconiaDemography) written in R Markdown collaboratively via GitHub
 
+--
+
 2021 — Mentored [REU students](https://github.com/BrunaLab/REU-resources) remotely using GitHub to share and review code and data
+
+--
 
 2021 — [SORTEE conference](https://www.sortee.org/past/).  Started work on [collaborative manuscript]() with working title:
 "Not just for programmers: A friendly guide on the versatility/benefits of GitHub for accelerating collaborative research in Ecology and Evolution"
 
-My inspriation for working on this paper:
-- GitHub is great, but even better if you get buy-in from all collaborators.
-- How to convince coders and non-coders to interact via GitHub?
+.center[
+My inspiration:
+**"GitHub is great, but it could be even better with more buy-in from collaborators.  How can I lower barriers?"**
+]
 
 ---
 class: inverse center middle
@@ -167,9 +179,9 @@ class: inverse center middle
 ---
 ## Collaborative Data Analysis
 
-Multiple people can be given permission to **push** changes to a GitHub repository
+Multiple people can be given permission to work on a single GitHub repository
 
-One option to get help with some code:
+**A possible workflow for getting feedback on R code:**
 
 - I **push** R code to GitHub and ask Elizabeth to review it
 
@@ -179,7 +191,13 @@ One option to get help with some code:
 
 - I then **pull** her changes and run updated code on my computer
 
-#### This could be really useful for remote and bi-coastal advising on data analysis!
+--
+
+More complicated workflows that better manage conflicts exist, but are not strictly necessary
+
+--
+
+### This could be really useful for *remote* and *bi-coastal* labs doing a lot of modeling and data analysis!
 
 ---
 ## Interacting with Published R Code
@@ -196,17 +214,28 @@ One option to get help with some code:
 
 - Make contributions with **pull requests**
 
+###Demo:
+
+- Example R Package: https://github.com/lme4/lme4
+- Example Discussions: https://github.com/easystats/performance/discussions
+- Example manuscript code: https://github.com/weecology/white-etal-2012-ecology
+- Example PR: https://github.com/bbolker/bbmle/pull/21
+
+
 ---
 ## Archiving Data and Code
 
-- While GitHub is *not* recommended for long-term archiving data and code, it integrates with FigShare and Zenodo
+- Journals increasingly requiring data (and code) to be archived
 
-- More reliable and re-usable than supplying supplemental code as an attachment
+- GitHub alone not suitable for long-term archiving, but GitHub + Zotero is recommended ([Mislan et al. 2016](https://doi.org/10.1016/j.tree.2015.11.006))
 
-- Literally just flip a switch on Zenodo, then create a **release** on GitHub and the whole repository is archived and given a DOI
+- Archived code is more reliable and often easier to use than journal supplements
 
+- Literally just flip a switch on Zenodo, then create a **release** on GitHub and the whole repository is archived and given a DOI.
+
+.center[
 [![](/images/ex_doi.png)](https://github.com/Aariq/PCA-vs-PLS)
-
+]
 ---
 ## Websites
 
@@ -214,14 +243,15 @@ GitHub pages is a feature that will turn any .md or .html file on GitHub into a 
 
 #### Uses from simple to complex:
 
-- knit R Markdown report to html, send link to your collaborators or advisor (e.g. https://brunalab.github.io/heliconia-cmip/)
+- Single R Markdown report to send to advisor or collaborators (e.g. https://brunalab.github.io/heliconia-cmip/)
 
-- Use to host slides made in R Markdown (like these ones!)
+- Host an HTML-based presentation (like this one!)
 
-- Create a website summarizing a project or manuscript (e.g. https://lter.github.io/lterdatasampler/)
+- Summary of a project or manuscript (e.g. https://lter.github.io/lterdatasampler/)
 
-- Use to host a [personal](https://github.com/Aariq/website-v2) or [lab website](https://github.com/weecology/website) or blog
+- Website for a course (e.g. https://github.com/weecology/forecasting-course)
 
+- Personal or lab website (e.g. https://github.com/weecology/website)
 
 ---
 ## Manuscripts
@@ -230,13 +260,18 @@ Although it's not really it's *intended* use, GitHub can be used effectively for
 
 Some caveats:
 
-- git only tracks differences in *plain text*, so .docx files won't work well
+- git only tracks differences in *plain text*, so .docx files won't work well (markdown is an alternative)
 - Not synchronous like Google Docs
 - not as easy to add comments like in Word
+
+Some benefits:
+- sane management of conflicts
+- centralized discussion and versioning
+- everyone has access to most up-to-date version
 ]
 
 .pull-right[
-Alternative: Markdown is plain text, but allows for simple formatting and citations:
+### Example of Using Markdown
 
 ```
 # Heading
@@ -256,304 +291,7 @@ $y = mx + \beta$
 $y = mx + \beta$
 
 ]
----
-name: colors
 
-## Colors
-
-.left-column[
-Text color
-
-[Link Color](#3)
-
-**Bold Color**
-
-_Italic Color_
-
-`Inline Code`
-]
-
-.right-column[
-Lorem ipsum dolor sit amet, [consectetur adipiscing elit (link)](#3), 
-sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-Erat nam at lectus urna.
-Pellentesque elit ullamcorper **dignissim cras tincidunt (bold)** lobortis feugiat. 
-_Eros donec ac odio tempor_ orci dapibus ultrices. 
-Id porta nibh venenatis cras sed felis eget velit aliquet.
-Aliquam id diam maecenas ultricies mi.
-Enim sit amet 
-`code_color("inline")`
-venenatis urna cursus eget nunc scelerisque viverra.
-]
-
----
-
-# Big Topic or Inverse Slides `#`
-
-## Slide Headings `##`
-
-### Sub-slide Headings `###`
-
-#### Bold Call-Out `####`
-
-This is a normal paragraph text. Only use header levels 1-4.
-
-##### Possible, but not recommended `#####`
-
-###### Definitely don't use h6 `######`
-
----
-
-# Left-Column Headings
-
-.left-column[
-## First
-
-## Second
-
-## Third
-]
-
-.right-column[
-Dolor quis aptent mus a dictum ultricies egestas.
-
-Amet egestas neque tempor fermentum proin massa!
-
-Dolor elementum fermentum pharetra lectus arcu pulvinar.
-]
-
----
-class: inverse center middle
-
-# Topic Changing Interstitial
-
---
-
-```
-class: inverse center middle
-```
-
----
-layout: true
-
-## Blocks
-
----
-
-### Blockquote
-
-> This is a blockquote following a header.
->
-> When something is important enough, you do it even if the odds are not in your favor.
-
----
-
-### Code Blocks
-
-#### R Code
-
-```{r eval=FALSE}
-ggplot(gapminder) +
-  aes(x = gdpPercap, y = lifeExp, size = pop, color = country) +
-  geom_point() +
-  facet_wrap(~year)
-```
-
-#### JavaScript
-
-```js
-var fun = function lang(l) {
-  dateformat.i18n = require('./lang/' + l)
-  return true;
-}
-```
-
----
-
-### More R Code
-
-```{r eval=FALSE}
-dplyr::starwars %>% dplyr::slice_sample(n = 4)
-```
-
----
-
-```{r message=TRUE, eval=requireNamespace("cli", quietly = TRUE)}
-cli::cli_alert_success("It worked!")
-```
-
---
-
-```{r message=TRUE}
-message("Just a friendly message")
-```
-
---
-
-```{r warning=TRUE}
-warning("This could be bad...")
-```
-
---
-
-```{r error=TRUE}
-stop("I hope you're sitting down for this")
-```
-
-
----
-layout: true
-
-## Tables
-
----
-exclude: `r if (requireNamespace("tibble", quietly=TRUE)) "false" else "true"`
-
-```{r eval=requireNamespace("tibble", quietly=TRUE)}
-tibble::as_tibble(mtcars)
-```
-
----
-
-```{r}
-knitr::kable(head(mtcars), format = 'html')
-```
-
----
-exclude: `r if (requireNamespace("DT", quietly=TRUE)) "false" else "true"`
-
-```{r eval=requireNamespace("DT", quietly=TRUE)}
-DT::datatable(head(mtcars), fillContainer = FALSE, options = list(pageLength = 4))
-```
-
----
-layout: true
-
-## Lists
-
----
-
-.pull-left[
-#### Here is an unordered list:
-
-*   Item foo
-*   Item bar
-*   Item baz
-*   Item zip
-]
-
-.pull-right[
-
-#### And an ordered list:
-
-1.  Item one
-1.  Item two
-1.  Item three
-1.  Item four
-]
-
----
-
-### And a nested list:
-
-- level 1 item
-  - level 2 item
-  - level 2 item
-    - level 3 item
-    - level 3 item
-- level 1 item
-  - level 2 item
-  - level 2 item
-  - level 2 item
-- level 1 item
-  - level 2 item
-  - level 2 item
-- level 1 item
-
----
-
-### Nesting an ol in ul in an ol
-
-- level 1 item (ul)
-  1. level 2 item (ol)
-  1. level 2 item (ol)
-    - level 3 item (ul)
-    - level 3 item (ul)
-- level 1 item (ul)
-  1. level 2 item (ol)
-  1. level 2 item (ol)
-    - level 3 item (ul)
-    - level 3 item (ul)
-  1. level 4 item (ol)
-  1. level 4 item (ol)
-    - level 3 item (ul)
-    - level 3 item (ul)
-- level 1 item (ul)
-
----
-layout: true
-
-## Plots
-
----
-
-```{r plot-example, eval=requireNamespace("ggplot2", quietly=TRUE)}
-library(ggplot2)
-(g <- ggplot(mpg) + aes(hwy, cty, color = class) + geom_point())
-```
-
----
-
-```{r plot-example-themed, eval=requireNamespace("showtext", quietly=TRUE) && requireNamespace("ggplot2", quietly=TRUE)}
-g + xaringanthemer::theme_xaringan(text_font_size = 16, title_font_size = 18) +
-  ggtitle("A Plot About Cars")
-```
-
-.footnote[Requires `{showtext}`]
-
----
-layout: false
-
-## Square image
-
-<center><img src="https://octodex.github.com/images/labtocat.png" alt="GithHub Octocat" height="400px" /></center>
-
-.footnote[GitHub Octocat]
-
----
-
-### Wide image
-
-![A wide image with a diagram of branching in git.](https://docs.github.com/assets/images/help/repository/branching.png)
-
-.footnote[Wide images scale to 100% slide width]
-
----
-
-## Two images
-
-.pull-left[
-![A GitHub Octocat, style "mother hubber"](https://octodex.github.com/images/motherhubbertocat.png)
-]
-
-.pull-right[
-![A GitHub Octocat, style "dinotcat"](https://octodex.github.com/images/dinotocat.png)
-]
-
----
-
-### Definition lists can be used with HTML syntax.
-
-<dl>
-<dt>Name</dt>
-<dd>Godzilla</dd>
-<dt>Born</dt>
-<dd>1952</dd>
-<dt>Birthplace</dt>
-<dd>Japan</dd>
-<dt>Color</dt>
-<dd>Green</dd>
-</dl>
 
 ---
 class: center, middle
@@ -564,5 +302,3 @@ Slides created via the R packages:
 
 [**xaringan**](https://github.com/yihui/xaringan)<br>
 [gadenbuie/xaringanthemer](https://github.com/gadenbuie/xaringanthemer)
-
-The chakra comes from [remark.js](https://remarkjs.com), [**knitr**](http://yihui.name/knitr), and [R Markdown](https://rmarkdown.rstudio.com).
