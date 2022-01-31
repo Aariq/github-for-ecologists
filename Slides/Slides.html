@@ -21,30 +21,23 @@ class: inverse, title-slide, center, middle, title-slide
 
 
 
-
-
 ---
 ## Outline 
 
 ### 1. What is git / GitHub?
 
-
+--
 
 ### 2. Some context for this talk
 
-
+--
 
 ### 3. Benefits of using git / GitHub in ecology
 
-  - Finding, re-using, and contributing to code
-
-  - Backup and version control
-
-  - Archiving and sharing code and data
-
-  - As a collaboration hub
-
-If you're a non-coder or a coder who has no bandwidth to learn new software, this talk is **still for you**!
+--
+.center[
+##If you're a non-coder or a coder who has no bandwidth to learn new software, this talk is *still for you*!
+]
 
 
 ---
@@ -58,9 +51,11 @@ If you're a non-coder or a coder who has no bandwidth to learn new software, thi
 
 
 
-#### Example **Repository**:
-
-!["four files with icons and the following filenames: data_raw.csv, fig1.png, analysis.R, report.Rmd"](/images/ex_proj.png)
+  .center[
+  #### Example **Repository**:
+  
+  !["four files with icons and the following filenames: data_raw.csv, fig1.png, analysis.R,   report.Rmd"](../images/ex_proj.png)
+  ]
 ]
 .pull-right[
 
@@ -72,9 +67,10 @@ If you're a non-coder or a coder who has no bandwidth to learn new software, thi
 
 3. Take a snapshot with a **commit**.  Must include message explaining changes!
 
-
-&lt;img src="/images/ex_commit.png" 
-     alt="four files with icons and the following filenames: data_raw.csv, fig1.png, analysis.R, report.Rmd" /&gt;
+  .center[
+  &lt;img src="/images/ex_commit.png" 
+       alt="four files with icons and the following filenames: data_raw.csv, fig1.png, analysis.R,   report.Rmd" /&gt;
+  ]
 ]
 
 ---
@@ -82,26 +78,31 @@ If you're a non-coder or a coder who has no bandwidth to learn new software, thi
 
 So instead of this:
 .pull-left[
-![image of files named analysis_new.R, analysis_final.R, analysis_FINAL_FOR_REALZ.R, and analysis_EB_idea.R](/images/ex_messy.png)
+![image of files named analysis_new.R, analysis_final.R, analysis_FINAL_FOR_REALZ.R, and analysis_EB_idea.R](../images/ex_messy.png)
 ]
 .pull-right[
-![commented-out R code starting with '#OLD CODE, might not work'](/images/ex_oldcode.png)
+![commented-out R code starting with '#OLD CODE, might not work'](../images/ex_oldcode.png)
 ]
+
+--
 
 You have this:
 
 .center[
-![image of git commit history with commits "initial commit", "add summary table", "move fig1 code to report", "add linear model", "change to log-normal GLM"](/images/ex_hist.png)
+![image of git commit history with commits "initial commit", "add summary table", "move fig1 code to report", "add linear model", "change to log-normal GLM"](../images/ex_hist.png)
 ]
 
 ---
 ## GitHub
 
-- Website that hosts git repositories in a centralized place for cloud-backup, code discovery and sharing, and collaboration
+- Website for hosting version controlled code and interfacing with git
 
-- Web interface for git
+- Supports sharing and collaborating on code (and other text)
+
+- Sync your local git-tracked repository with GitHub
 
 - Repositories can be public or private
+
 
 --
 
@@ -183,7 +184,7 @@ Multiple people can be given permission to work on a single GitHub repository
 
 --
 
-More complicated workflows that better manage conflicts exist, but are not strictly necessary
+More [complicated workflows](https://docs.github.com/en/get-started/quickstart/github-flow) that better manage conflicts exist, but are not strictly necessary
 
 --
 
@@ -260,8 +261,10 @@ Some benefits:
 - everyone has access to most up-to-date version
 ]
 
+--
+
 .pull-right[
-### Example of Using Markdown
+#### Markdown Example:
 
 ```
 # Heading
@@ -273,20 +276,44 @@ Some benefits:
 ```
 **bold**, *italics*
 ```
+
 **bold**, *italics*
+
 ```
-$y = mx + \beta$
+$y = \alpha_0 + \beta_1 x_1$
 ```
 
-`\(y = mx + \beta\)`
+`\(y = \alpha_0 + \beta_1 x_1\)`
 
 ]
+
+
+---
+## Where Do I Learn More?
+
+**For more in-depth overview:**
+
+Bryan, Jennifer (2018) “Excuse Me, Do You Have a Moment to Talk about Version Control?” The American Statistician 72(1):20–27. https://doi.org/10.1080/00031305.2017.1399928.
+
+**Step-by-step instructions for R Users:**
+
+www.happygitwithr.com
+
+**GitHub's startup guide:**
+
+https://docs.github.com/en/get-started
+
+**Guide to making a pull-request from RStudio:**
+
+https://usethis.r-lib.org/articles/pr-functions.html
+
 
 
 ---
 class: center, middle
 
 # Thanks!
+# Questions?
 
 Slides created via the R packages:
 
@@ -298,7 +325,7 @@ Slides created via the R packages:
 <script>var slideshow = remark.create({
 "slideNumberFormat": "%current%",
 "highlightStyle": "github",
-"highlightLines": true,
+"highlightLines": false,
 "ratio": "16:9",
 "countIncrementalSlides": false
 });
@@ -366,24 +393,7 @@ if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
       links[i].target = '_blank';
     }
   }
-})();
-// adds .remark-code-has-line-highlighted class to <pre> parent elements
-// of code chunks containing highlighted lines with class .remark-code-line-highlighted
-(function(d) {
-  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
-  const preParents = [];
-  const findPreParent = function(line, p = 0) {
-    if (p > 1) return null; // traverse up no further than grandparent
-    const el = line.parentElement;
-    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
-  };
-
-  for (let line of hlines) {
-    let pre = findPreParent(line);
-    if (pre && !preParents.includes(pre)) preParents.push(pre);
-  }
-  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
-})(document);</script>
+})();</script>
 
 <script>
 slideshow._releaseMath = function(el) {
