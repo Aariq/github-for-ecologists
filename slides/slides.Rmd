@@ -248,7 +248,7 @@ GitHub pages is a feature that will turn any .md or .html file on GitHub into a 
 
 - Single R Markdown report to send to advisor or collaborators (e.g. https://brunalab.github.io/heliconia-cmip/)
 
-- Host an HTML-based presentation (like this one!)
+- Host an HTML-based presentation (like this one! https://aariq.github.io/github-for-ecologists/slides/slides.html)
 
 - Summary of a project or manuscript (e.g. https://lter.github.io/lterdatasampler/)
 
