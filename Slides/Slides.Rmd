@@ -235,8 +235,9 @@ More [complicated workflows](https://docs.github.com/en/get-started/quickstart/g
 - Literally just flip a switch on Zenodo, then create a **release** on GitHub and the whole repository is archived and given a DOI.
 
 .center[
-[![](/images/ex_doi.png)](https://github.com/Aariq/PCA-vs-PLS)
+  [![](/images/ex_doi.png)](https://github.com/Aariq/PCA-vs-PLS)
 ]
+
 ---
 ## Websites
 
@@ -252,7 +253,9 @@ GitHub pages is a feature that will turn any .md or .html file on GitHub into a 
 
 - Website for a course (e.g. https://github.com/weecology/forecasting-course)
 
-- Personal or lab website (e.g. https://github.com/weecology/website)
+- Personal website (e.g. https://masonfidino.com/)
+
+- Lab website (e.g. https://github.com/weecology/website)
 
 ---
 ## Manuscripts
@@ -317,7 +320,11 @@ https://docs.github.com/en/get-started
 
 https://usethis.r-lib.org/articles/pr-functions.html
 
+**Making a website**
 
+https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll
+
+https://rstudio.github.io/distill/website.html
 
 ---
 class: center, middle
