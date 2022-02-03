@@ -15,6 +15,7 @@ output:
       countIncrementalSlides: false
       titleSlideClass: ["inverse", "title-slide",  "center", "middle"]
 ---
+
 ```{r setup, include=FALSE}
 options(htmltools.dir.version = FALSE)
 knitr::opts_chunk$set(
@@ -31,7 +32,7 @@ knitr::opts_chunk$set(
 library(xaringanthemer)
 style_mono_accent(base_color = "#23395b")
 ```
----
+
 ## Outline 
 
 ### 1. What is git / GitHub?
