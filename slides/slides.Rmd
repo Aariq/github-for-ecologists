@@ -52,7 +52,7 @@ style_mono_accent(base_color = "#23395b")
 
 
 ---
-## Git
+<img src="../images/git_logo.png" width="200"/>
 .pull-left[
 - **Version control** software
 
@@ -85,7 +85,7 @@ style_mono_accent(base_color = "#23395b")
 ]
 
 ---
-## Git
+<img src="../images/git_logo.png" width="200"/>
 
 So instead of this:
 .pull-left[
@@ -104,7 +104,7 @@ You have this:
 ]
 
 ---
-## GitHub
+<img src="../images/github_logo.png" width=250/>
 
 - Website for hosting version controlled code and interfacing with git
 
