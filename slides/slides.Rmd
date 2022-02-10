@@ -1,6 +1,6 @@
 ---
-title: "Excuse me, do you have a moment to talk about GitHub?"
-subtitle: "Using git and GitHub in Ecology"  
+title: "Not Just for Programmers"
+subtitle: "Applications of Git and GitHub for Ecologists"  
 author: 
   - "Eric R. Scott"
 date: '`r Sys.Date()`'
