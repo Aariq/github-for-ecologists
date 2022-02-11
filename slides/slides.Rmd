@@ -1,8 +1,12 @@
 ---
 title: "Not Just for Programmers"
 subtitle: "Applications of Git and GitHub for Ecologists"  
-author: Eric R. Scott
-date: '`r Sys.Date()`'
+author: |
+  Eric R. Scott
+   
+  `r fontawesome::fa("twitter")` <a href=https://twitter.com/LeafyEricScott> @LeafyEricScott </a> <br>
+  `r fontawesome::fa("github")` <a href=https://github.com/Aariq> Aariq </a>
+date: 'Updated `r Sys.Date()`'
 output:
   xaringan::moon_reader:
     css: xaringan-themer.css
@@ -29,7 +33,7 @@ knitr::opts_chunk$set(
 ```
 ```{r xaringan-themer, include=FALSE, warning=FALSE}
 library(xaringanthemer)
-style_mono_accent(base_color = "#23395b")
+style_mono_accent(base_color = "#23395b",inverse_link_color = "white")
 ```
 
 ## Outline 
