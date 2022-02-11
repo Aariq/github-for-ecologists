@@ -92,7 +92,8 @@ So instead of this:
 ![image of files named analysis_new.R, analysis_final.R, analysis_FINAL_FOR_REALZ.R, and analysis_EB_idea.R](../images/ex_messy.png)
 ]
 .pull-right[
-![commented-out R code starting with '#OLD CODE, might not work'](../images/ex_oldcode.png)
+<img src ="../images/ex_oldcode.png"
+     alt = "commented-out R code starting with '#OLD CODE, might not work'"/>
 ]
 
 --
