@@ -1,8 +1,7 @@
 ---
 title: "Not Just for Programmers"
 subtitle: "Applications of Git and GitHub for Ecologists"  
-author: 
-  - "Eric R. Scott"
+author: Eric R. Scott
 date: '`r Sys.Date()`'
 output:
   xaringan::moon_reader:
@@ -123,7 +122,7 @@ You have this:
 .pull-right[
 <img src="../images/github_bryan.png" width = 450 />
 ]
-
+.right[Image Credit: [Bryan et al. 2018](https://doi.org/10.1080/00031305.2017.1399928)]
 
 
 ---
