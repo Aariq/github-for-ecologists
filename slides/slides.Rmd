@@ -3,9 +3,10 @@ title: "Not Just for Programmers"
 subtitle: "Applications of Git and GitHub for Ecologists"  
 author: |
   Eric R. Scott
-   
-  `r fontawesome::fa("twitter")` <a href=https://twitter.com/LeafyEricScott> @LeafyEricScott </a> <br>
-  `r fontawesome::fa("github")` <a href=https://github.com/Aariq> Aariq </a>
+  
+  `r fontawesome::fa("twitter")` <a href=https://twitter.com/LeafyEricScott> @LeafyEricScott </a> |
+  `r fontawesome::fa("github")` <a href=https://github.com/Aariq> Aariq </a> |
+  `r fontawesome::fa("home")` <a href=https://www.ericrscott.com/> ericrscott.com </a>
 date: 'Updated `r Sys.Date()`'
 output:
   xaringan::moon_reader:
