@@ -79,7 +79,7 @@ style_mono_accent(base_color = "#23395b")
 3. Take a snapshot with a **commit**.  Must include message explaining changes!
 
 .center[
-  <img src="/images/ex_commit.png" 
+  <img src="../images/ex_commit.png" 
        alt="four files with icons and the following filenames: data_raw.csv, fig1.png, analysis.R,   report.Rmd"/>
 ]
 ]
